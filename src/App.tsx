@@ -1,10 +1,12 @@
 import React from 'react';
 import Layout from './components/layout/Layout';
+import SearchBar from './components/SearchBar';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <Layout>
-      <h1>메인이 될 페이지!!!</h1>
+      <SearchBar/>
     </Layout>
   );
 }

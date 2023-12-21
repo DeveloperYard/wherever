@@ -7,9 +7,11 @@ const Layout = (props: {children: React.ReactNode}) => {
   return (
     <div className={styles.layout}>
       <Header/>
+      <div>
         <main>
           {props.children}
         </main>
+      </div>
       <Footer/>
     </div>
   )
