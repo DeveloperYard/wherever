@@ -1,0 +1,18 @@
+.searchBox {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  .inputArea {
+    width: 800px;
+    height: auto;
+    float: left;
+  }
+  .buttonArea {
+    width: 100px;
+    height: auto;
+    float: left;
+  }
+}
+
+
+
