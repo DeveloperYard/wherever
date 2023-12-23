@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Layout from './components/layout/Layout';
 import SearchBar from './components/SearchBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -7,6 +7,7 @@ import TripPage from './components/trip/TripPage';
 import Home from './Home';
 
 function App() {
+
   return (
       <Layout>
         <Routes>

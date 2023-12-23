@@ -1,11 +1,15 @@
 {
   "compilerOptions": {
+    "plugins":[
+      {"dotenv": {}}
+    ],
     "target": "es5",
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
+    "types": ["node", "react"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,

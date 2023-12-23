@@ -13,6 +13,9 @@ const Header = () => {
                 <img src={logo} className={styles.logo} alt="Wherever"/>
               </Navbar.Brand>
               <Nav className="mr-auto">
+                <Nav.Link href="/">
+                  Home
+                </Nav.Link>
                 <Nav.Link href="/trip-board">
                   여행 공유
                 </Nav.Link>
