@@ -1,24 +1,27 @@
 import React, {useState, useRef, ChangeEvent, KeyboardEvent} from 'react'
+import {Routes, Route, useNavigate} from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import styles from './SearchBar.module.scss';
 import {Search} from 'react-bootstrap-icons';
 
+
 const SearchBar = () => {
 
   const [text, setText] = useState<string>('');
   const inputRef = useRef<HTMLInputElement>(null);
-
+  const navigate = useNavigate();
   const onChange = (e: ChangeEvent<HTMLInputElement>) => {
     setText(e.target.value);
   }
 
-  const handleMessage = () => {
+  const handleMessage = ():any => {
     if(text === ''){
       return alert('검색어를 입력해주세요');
     }
     // 메시지 전송하는 부분 구현
     // 라우팅 구현!!!
+    navigate('/trip-search', {state: {searchText: text}});
     // setText(''); // 메시지 전송 후 input 빈값으로 수정
     // inputRef?.current?.focus(); // 메시지 전송 후 input 포커스
     setText('');
@@ -40,7 +43,7 @@ const SearchBar = () => {
         ref={inputRef}
         onKeyDown={handleKeyPress}
       />
-      <Button 
+      <Button
         className={styles.buttonArea}
         onClick={handleMessage}>
         <Search/>
