@@ -10,7 +10,7 @@ const TripPage = () => {
   return (
     <div>
       <h1>전달받은 값: {searchText}</h1>
-      <MapContainer />
+      <MapContainer searchText={searchText} />
     </div>
   );
 };

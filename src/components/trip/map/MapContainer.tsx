@@ -6,7 +6,13 @@ declare global {
   }
 }
 
-const MapContainer = () => {
+interface MapContainerProps {
+  searchText: string;
+}
+
+const MapContainer: React.FunctionComponent<MapContainerProps> = ({
+  searchText,
+}) => {
   useEffect(() => {
     const mapScript = document.createElement("script");
 
@@ -28,6 +34,7 @@ const MapContainer = () => {
     mapScript.addEventListener("load", onLoadKakaoMap);
   }, []);
 
+  console.log(searchText);
   return (
     <div className="MapContainer">
       <div id="map" style={{ width: "100vw", height: "100vh" }} />
