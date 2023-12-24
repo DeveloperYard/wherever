@@ -13,6 +13,8 @@ interface MapContainerProps {
 const MapContainer: React.FunctionComponent<MapContainerProps> = ({
   searchText,
 }) => {
+  console.log("useeffect in MapContainer!");
+  console.log(searchText);
   useEffect(() => {
     const mapScript = document.createElement("script");
 
@@ -88,7 +90,7 @@ const MapContainer: React.FunctionComponent<MapContainerProps> = ({
       });
     };
     mapScript.addEventListener("load", onLoadKakaoMap);
-  }, []);
+  }, [searchText]);
 
   console.log(searchText);
   return (
