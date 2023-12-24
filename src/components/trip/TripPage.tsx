@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-
 import { useLocation } from "react-router-dom";
 import MapContainer from "./map/MapContainer";
 import SearchBarInPage from "./SearchBarInPage";
+import ReviewBoard from "./review/ReviewBoard";
 
 const TripPage = () => {
   const location = useLocation();
@@ -19,7 +19,10 @@ const TripPage = () => {
   return (
     <div>
       <SearchBarInPage searchText={state} handleState={handleState} />
-      <MapContainer searchText={state} />
+      <div style={{ display: "flex" }}>
+        {<MapContainer searchText={state} />}
+        {<ReviewBoard />}
+      </div>
     </div>
   );
 };

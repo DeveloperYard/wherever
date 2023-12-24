@@ -13,8 +13,6 @@ interface MapContainerProps {
 const MapContainer: React.FunctionComponent<MapContainerProps> = ({
   searchText,
 }) => {
-  console.log("useeffect in MapContainer!");
-  console.log(searchText);
   useEffect(() => {
     const mapScript = document.createElement("script");
 
@@ -46,6 +44,7 @@ const MapContainer: React.FunctionComponent<MapContainerProps> = ({
 
             for (let i = 0; i < data.length; i++) {
               displayMarker(data[i]);
+              console.log(data[i]);
               bounds.extend(new kakao.maps.LatLng(data[i].y, data[i].x));
             }
 
@@ -76,6 +75,7 @@ const MapContainer: React.FunctionComponent<MapContainerProps> = ({
                 "</div>"
             );
             infowindow.open(map, marker);
+            console.log(infowindow);
           });
         }
         // 여기 아래는 custom overlay!
